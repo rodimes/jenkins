@@ -1,3 +1,6 @@
 #!/bin/bash -e
+set -o pipefail
 
-docker build --force-rm -t rodimes_jenkins .
+CONTAINER_NAME="jenkins"
+
+docker build -t ${CONTAINER_NAME} .
